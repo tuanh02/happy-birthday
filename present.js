@@ -1,6 +1,6 @@
 
 var to = 'Phạm Thị Uyên!';
-var gift_url = '#';
+var gift_url = '';
 var gift_image_url = 'img/avt.jpg';
 
 
