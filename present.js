@@ -1,6 +1,6 @@
 
 var to = 'Phạm Thị Uyên!';
-var gift_url = 'http://www.amazon.com/gp/product/B00X4WHP5E/ref=ods_xs_ae_shurl?tag=googhydr-20&hvadid=74652194316&hvpos=1t1&hvexid=&hvnetw=g&hvrand=7560558939874219351&hvpone=&hvptwo=&hvqmt=b&hvdev=c&ref=pd_sl_2vatdqwe3p_b';
+var gift_url = '#';
 var gift_image_url = 'img/avt.jpg';
 
 
