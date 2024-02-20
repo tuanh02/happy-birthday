@@ -1,0 +1,13 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+  #canvas {
+    height: 100vh;
+    width: 100vw;
+    background-image: url(img/284933a6c06630fc94670b7b3f355f79.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+

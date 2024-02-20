@@ -1,0 +1,88 @@
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="canvas.css">
+    <link rel="stylesheet" href="present.css">
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="card.css">
+  
+</head>
+<body>
+  <audio id="Audio" autoplay loop>
+    <source src="music/musicHpbd.mp3" type="audio/mp3">
+  </audio>
+    <div class="parent">
+        <canvas id="canvas"></canvas>
+        <section class="above-fold">
+            <div class="wrap-present">
+              <div class="present-box" id="present">
+                <div class="present">
+                  <div class="img-wrap" id="present-image">
+                    
+                  </div>
+                </div>
+                <div class="side front"></div>
+                <div class="side back"></div>
+                <div class="side left"></div>
+                <div class="side right"></div>
+                <div class="side top">
+                  <span class="to">
+                    <span class="name" id="nametag">
+                    </span>
+                  </span>
+                </div>
+                <div class="side bottom"></div>
+              </div>
+            </div>
+            <p class="info-text">Bấm vào hộp quà để mở</p>
+          </section>
+          <div id="card">
+            <h4>💘Lời nhắn💘</h4>
+            <img class="card-img" src="img/avt.jpg">
+            <h4>Chúc mừng sinh nhật bạn iu, chúc mừng bạn trưởng thành thêm 1 tuổi, chúc bạn làm ăn may mắn, mau giàu, mạnh khỏe nhá!</h4>
+        </div>
+
+        <div class="animation-container">
+          <div class="burst">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+          </div>
+          
+        </div>
+        <button id="PlayButton">Play Music</button>
+    </div>
+</body>
+<!-- <script src="canvas.js"></script> -->
+<script>
+  const audio = document.getElementById('Audio');
+  function playMusic() {
+    audio.play();
+  }
+  window.addEventListener('load', playMusic);
+
+</script>
+<script>
+  document.getElementById('PlayButton').addEventListener('click', function() {
+    var audio = document.getElementById('Audio');
+    audio.play()
+      .then(function() {
+        // Xử lý khi phát âm thanh thành công
+      })
+      .catch(function(error) {
+        // Xử lý khi phát âm thanh thất bại
+        console.log('Lỗi: ' + error.message);
+      });
+  });
+</script>
+<script src="present.js"></script>
+<script src="main.js"></script>
+</html>
