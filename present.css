@@ -24,7 +24,7 @@ html, body {
     font-weight: 600;
     font-size: 25px;
     height: 25px;
-    margin-top: 10%;
+    margin-top: 5%;
     animation: move 2s infinite;
   }
 
@@ -33,7 +33,7 @@ html, body {
       transform: translateY(0);
     }
     50% {
-      transform: translateY(50px);
+      transform: translateY(40px);
     }
   }
   
