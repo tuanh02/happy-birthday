@@ -34,7 +34,14 @@ function init() {
     
   present.addEventListener("click", function(e){
     present.classList.toggle("open");
-    document.getElementById('card').classList.add('card-show');
+    /* document.getElementById('messageBtn').classList.add('message-show'); */
+    document.getElementById('bal').classList.add('ballon-show');
+    document.getElementById('bal2').classList.add('ballon2-show');
+    document.getElementById('bal3').classList.add('ballon3-show');
+    document.getElementById('bal4').classList.add('ballon4-show');
+    setTimeout(function() {
+      messageBtn.classList.add('message-show');
+    }, 7000);
   }, false);
   
   
