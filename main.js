@@ -19,3 +19,8 @@ function createBur(){
 }
 setInterval(createBur, 500)
 
+var message = document.getElementById(messageBtn)
+messageBtn.addEventListener("click", function(e){
+    present.classList.toggle("open");
+    document.getElementById('card').classList.add('card-show');
+  }, false);
