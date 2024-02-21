@@ -1,6 +1,7 @@
 .parent{
     position: relative;
     overflow: hidden;
+    text-align: center;
 }
 .above-fold{
     position: absolute;
@@ -8,6 +9,178 @@
     left: 50%;
     transform: translate(-50%, -50%);
 }
+
+
+
+
+.balloon {
+    display: inline-block;
+    width: 120px;
+    height: 145px;
+    background: hsl(215, 50%, 65%);
+    border-radius: 80%;
+    box-shadow: inset -10px -10px 0 rgba(0, 0, 0, 0.07);
+    margin: 20px 30px;
+    transition: transform 0.5s ease;
+    z-index: 10;
+    animation: balloons 4s ease-in-out infinite;
+    transform-origin: bottom center;
+    position: absolute;
+    top: 100%;
+    left: 20%;
+    opacity: 0;
+  }
+
+  .ballon-show{
+    opacity: 1;
+    top: 0;
+    transition: top 1.5s linear, opacity 1.5s ease;
+    z-index: 999;
+    }
+
+  .balloon2 {
+    background: hsl(245, 40%, 65%);
+    left: 35%;
+  }
+  .ballon2-show{
+    opacity: 1;
+    top: 0;
+    transition: top 2.5s linear, opacity 2.5s ease;
+    z-index: 999;
+    }
+
+  .balloon3 {
+    background: hsl(139, 50%, 60%);
+    left: 50%;
+  }
+  .ballon3-show{
+    opacity: 1;
+    top: 0;
+    transition: top 3.5s linear, opacity 3.5s ease;
+    z-index: 999;
+    }
+  
+  .balloon4 {
+    background: hsl(59, 50%, 58%);
+    left: 65%;
+  }
+  .ballon4-show{
+    opacity: 1;
+    top: 0;
+    transition: top 4.5s linear, opacity 4.5s ease;
+    z-index: 999;
+    }
+
+  @keyframes balloons {
+    0%,
+    100% {
+      transform: translateY(0) rotate(-4deg);
+    }
+    50% {
+      transform: translateY(-25px) rotate(4deg);
+    }
+  }
+  
+
+  .balloon:before {
+    content: "▲";
+    font-size: 20px;
+    color: hsl(215, 30%, 50%);
+    display: block;
+    text-align: center;
+    width: 100%;
+    position: absolute;
+    bottom: -12px;
+    z-index: -100;
+    position: absolute;
+    
+  }
+  .balloon::after{
+    position: absolute;
+    content: "Chúc";
+    font-size: 35px;
+    color: rgb(255, 0, 0);
+    text-align: center;
+    top: 35%;
+    left: 20%;
+    font-weight: 600;
+  }
+
+  .balloon2::before {
+    content: "▲";
+    font-size: 20px;
+    color: hsl(245, 40%, 65%);
+    display: block;
+    text-align: center;
+    width: 100%;
+    position: absolute;
+    bottom: -12px;
+    z-index: -100;
+    position: absolute;
+    
+  }
+  .balloon2::after{
+    position: absolute;
+    content: "Mừng";
+    font-size: 35px;
+    color: red;
+    text-align: center;
+    top: 35%;
+    left: 15%;
+    font-weight: 600;
+  }
+
+  .balloon3::before {
+    content: "▲";
+    font-size: 20px;
+    color: hsl(139, 50%, 60%);
+    display: block;
+    text-align: center;
+    width: 100%;
+    position: absolute;
+    bottom: -12px;
+    z-index: -100;
+    position: absolute;
+    
+  }
+  .balloon3::after{
+    position: absolute;
+    content: "Sinh";
+    font-size: 35px;
+    color: red;
+    text-align: center;
+    top: 35%;
+    left: 20%;
+    font-weight: 600;
+  }
+
+  .balloon4::before {
+    content: "▲";
+    font-size: 20px;
+    color: hsl(59, 50%, 58%);
+    display: block;
+    text-align: center;
+    width: 100%;
+    position: absolute;
+    bottom: -12px;
+    z-index: -100;
+    position: absolute;
+    
+  }
+  .balloon4::after{
+    position: absolute;
+    content: "Nhật";
+    font-size: 35px;
+    color: red;
+    text-align: center;
+    top: 35%;
+    left: 20%;
+    font-weight: 600;
+  }
+
+
+  
+  
 
 #PlayButton{
     position: absolute;
@@ -25,6 +198,27 @@
     cursor: pointer;
 }
 
+#messageBtn{
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    color: red;
+    font-size: 20px;
+    background-color: rgb(213, 240, 252);
+    border: none;
+    border-radius: 5px;
+    width: auto;
+    transform: translateX(-50%);
+    font-weight: 600;
+    cursor: pointer;
+    opacity: 0;
+    z-index: 9991;
+}
+.message-show{
+    opacity: 1 !important;
+    transition: opacity 5s ease;;
+}
+
 @media only screen and (max-width: 600px) {
     #canvas{
         background-image: url(img/img-mobile.jpg);
@@ -32,9 +226,26 @@
         background-size: cover;
     }
     .above-fold .info-text {
-        margin-top: 30%;
-        font-size: 35px;
+        margin-top: 15%;
+        font-size: 25px;
         color: rgb(133, 1, 1);
+    }
+    .balloon{
+        width: 80px;
+        height: 100px;
+        left: -3%;
+    }
+    .balloon::after{
+        font-size: 25px;
+    }
+    .balloon2{
+        left: 20%;
+    }
+    .balloon3{
+        left: 43%;
+    }
+    .balloon4{
+        left: 66%;
     }
 }
 
@@ -57,6 +268,7 @@
     background: red;
     width: 10px;
     height: 50px;
+    z-index: 999999;
 }
 
 .burst .line:nth-child(1){
