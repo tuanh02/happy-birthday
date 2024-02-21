@@ -42,4 +42,5 @@
         opacity: 1 !important;
         left: 0 !important;
         transition: all 5s;
+        z-index: 9999;
     }
