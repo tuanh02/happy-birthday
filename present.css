@@ -121,8 +121,11 @@ html, body {
     transform: scale(1);
   }
   .present-box .present > .img-wrap img {
-    max-width: 100%;
-    height: auto;
+/*     max-width: 100%;
+    height: auto; */
+        max-width: 90%;
+        height: 90%;
+        margin-top: 10px
   }
   
   .present-box > .side {
