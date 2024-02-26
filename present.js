@@ -41,7 +41,7 @@ function init() {
     document.getElementById('bal4').classList.add('ballon4-show');
     setTimeout(function() {
       messageBtn.classList.add('message-show');
-    }, 7000);
+    }, 5000);
   }, false);
   
   
